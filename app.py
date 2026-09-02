@@ -9,8 +9,7 @@ usuarios = [
         "nombre": "EL 03",
         "rol": "FOUNDER",
         "color_rol": "#ef4444",
-        "banner": "fondo03.png",  # <--- Tu imagen de la carpeta static
-        "stats": {
+       "banner": "nuevo-fondo.gif",
             "palenques": "2s Palenques Ganados MVP",
             "rolas": "3 Rolas Champs Ganadas MVP",
             "pais": "🇸🇻 El Salvador",
