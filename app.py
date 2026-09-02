@@ -28,7 +28,6 @@ usuarios = [
         }
     },
     {
-   {
         "id": "cookie04",
         "nombre": "Cookie 04",
         "rol": "CO FOUNDER",
