@@ -28,14 +28,15 @@ usuarios = [
         }
     },
     {
+   {
         "id": "cookie04",
         "nombre": "Cookie 04",
         "rol": "CO FOUNDER",
         "color_rol": "#3b82f6",
         "banner": None,
         "stats": {
-            "pais": "sv El Salvador",
-            "estado": "Activo",
+            "pais": "cu Cuba",
+            "estado": "Legend. Retired X",
         }
     }
 ]
