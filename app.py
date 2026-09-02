@@ -1,39 +1,55 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 
-# Lista completa de usuarios con el usuario 03 actualizado con el nuevo GIF animado
+# Base de datos de perfiles
 usuarios = [
     {
-        "id": "01",
-        "nombre": "Usuario 01",
-        "rol": "Admin",
-        "banner": None,
-        "avatar": "fondo03.png"
+        "id": "el03",
+        "nombre": "EL 03",
+        "rol": "FOUNDER",
+        "color_rol": "#ef4444",
+        "banner": "fondo03.png",  # <--- Tu imagen de la carpeta static
+        "stats": {
+            "palenques": "2s Palenques Ganados MVP",
+            "rolas": "3 Rolas Champs Ganadas MVP",
+            "pais": "🇸🇻 El Salvador",
+        },
     },
     {
-        "id": "02",
-        "nombre": "Usuario 02",
-        "rol": "Moderador",
+        "id": "angel06",
+        "nombre": "angel 06",
+        "rol": "CO FOUNDER",
+        "color_rol": "#3b82f6",
         "banner": None,
-        "avatar": "fondo03.png"
+        "stats": {
+            "pais": "🇻🇪 Venezuela",
+            "estado": "Legend. Retired ❌",
+        },
     },
     {
-        "id": "03",
-        "nombre": "Usuario 03",
-        "rol": "Fundador",
-        "banner": "banner-03.gif",  # <--- Aquí está apuntando a tu nuevo GIF animado
-        "avatar": "fondo03.png"
-    }
+        "id": "cookie04",
+        "nombre": "Cookie 04",
+        "rol": "CO FOUNDER",
+        "color_rol": "#3b82f6",
+        "banner": None,
+        "stats": {
+            "pais": "🇨🇺 Cuba",
+            "estado": "Legend. Retired ❌",
+        },
+    },
 ]
 
-@app.route('/')
-def home():
-    return render_template('index.html')
 
-@app.route('/api/usuarios')
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
+@app.route("/api/usuarios")
 def get_usuarios():
     return jsonify(usuarios)
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
