@@ -2,41 +2,28 @@ from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
-# Base de datos de perfiles
+# Lista completa de usuarios con el usuario 03 actualizado con el nuevo GIF animado
 usuarios = [
     {
-        "id": "el03",
-        "nombre": "EL 03",
-        "rol": "FOUNDER",
-        "color_rol": "#ef4444",
-        "banner": "fondo03.png", # <--- Tu banner personal
-        "stats": {
-            "palenques": "2s Palenques Ganados MVP",
-            "rolas": "3 Rolas Champs Ganadas MVP",
-            "pais": "🇸🇻 El Salvador"
-        }
+        "id": "01",
+        "nombre": "Usuario 01",
+        "rol": "Admin",
+        "banner": None,
+        "avatar": "fondo03.png"
     },
     {
-        "id": "angel06",
-        "nombre": "angel 06",
-        "rol": "CO FOUNDER",
-        "color_rol": "#3b82f6",
+        "id": "02",
+        "nombre": "Usuario 02",
+        "rol": "Moderador",
         "banner": None,
-        "stats": {
-            "pais": "🇻🇪 Venezuela",
-            "estado": "Legend. Retired ❌"
-        }
+        "avatar": "fondo03.png"
     },
     {
-        "id": "cookie04",
-        "nombre": "Cookie 04",
-        "rol": "CO FOUNDER",
-        "color_rol": "#3b82f6",
-        "banner": None,
-        "stats": {
-            "pais": "🇨🇺 Cuba",
-            "estado": "Legend. Retired ❌"
-        }
+        "id": "03",
+        "nombre": "Usuario 03",
+        "rol": "Fundador",
+        "banner": "banner-03.gif",  # <--- Aquí está apuntando a tu nuevo GIF animado
+        "avatar": "fondo03.png"
     }
 ]
 
